@@ -22,5 +22,40 @@
 		else
 			out.print("F");
 	%>
+	
+	<p>if~else와 switch~case의 혼합형태 : choose태그</p>
+	<c:set var="avg" value="85" />
+	
+	<c:choose>
+		<c:when test="${avg >= 90}">
+			<p> <c:out value="A" /> </p>
+		</c:when>
+		<c:when test="${avg >= 80 }">
+			<p> <c:out value="B" /> </p>
+		</c:when>
+		<c:when test="${avg >= 70 }">
+			<p> <c:out value="C" /> </p>
+		</c:when>
+		<c:when test="${avg >= 60 }">
+			<p> <c:out value="D" /> </p>
+		</c:when>
+		<c:otherwise>
+			<p> <c:out value="F" /> </p>
+		</c:otherwise>
+	</c:choose>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
